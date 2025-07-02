@@ -193,3 +193,27 @@ Route::get ('/onetomany' , function(){
      return $comment;
 });
 
+Route::get ('/user/{id}/role' , function($id){
+    
+     $user = User::find($id)->roles;
+      
+      return $user->pluck('name');
+
+});
+
+
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
